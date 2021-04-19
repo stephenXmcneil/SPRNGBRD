@@ -1,0 +1,128 @@
+#header {
+    min-height: 100px;
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px;
+    border: 50px;
+    border-radius: 10px;
+}
+
+.title{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.label {
+    margin-left: 20px;
+    width: 250px;
+    display: inline-block;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+input[type="text"]  {
+    max-width: 77.5vw;
+    min-width: 70vw;
+    margin-left: 20px;
+    border-style:inset;
+    border-color: white;
+}
+
+#submitBtn{
+    background-color: cornflowerblue;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-left: 44vw;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: ivory;
+    border-style: outset;
+    border-color: cornflowerblue;
+    width: 100px;
+    height: 40px;
+}
+
+.scale {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.topText {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    position: relative;
+    color: white;
+    text-shadow:
+		-3px -3px 0 #000,
+		3px -3px 0 #000,
+		-3px 3px 0 #000,
+		3px 3px 0 #000;
+    text-transform: uppercase;
+    font-size: 45px;
+    display: block;
+}
+
+.bottomText {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    width: 90%;
+    padding-right: 20px;
+    padding-left: 20px;
+    bottom: -10px;
+    text-shadow:
+        -3px -3px 0 #000,
+         3px -3px 0 #000,
+         -3px 3px 0 #000,
+         3px 3px 0 #000;
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    font-size: 45px;
+
+}
+
+.divContainer {
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    min-width: auto;
+    max-width: auto;
+    border-radius: 5px;
+}
+
+.divContainer2 {
+    position: absolute;
+    border-radius: 10px;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.divContainer :hover{
+    background-color: black;
+    opacity: 50%;
+    z-index:100;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+} 
+
+.delBtn {
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: none;
+    color: white;
+    opacity:20%;
+    cursor: pointer;
+    font-size: 20vh;
+    padding: 0;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    outline: none;
+    border: none;
+}
