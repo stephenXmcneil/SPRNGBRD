@@ -43,11 +43,11 @@ describe("Helper funcs", function() {
 });
 
 describe("appendDeleteBtn()", function() {
-  it("what is par", function (){
-    let remBtn = document.createElement('td');
-    par = remBtn.parentElement;
-    console.log(newTr);
-    expect().toBe();
+  it("returns one less tr element", function (){
+    const tr = document.createElement('tr');
+    appendDeleteBtn(tr);
+    
+    expect(tr.children.length).toEqual(1);
   })
   
 })
