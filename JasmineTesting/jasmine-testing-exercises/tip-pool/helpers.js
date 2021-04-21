@@ -30,7 +30,6 @@ function appendDeleteBtn(tr) {
   remBtn.innerText = "X";
   tr.append(remBtn);
   remBtn.addEventListener("click", function(event){
-    // event.preventDefault();
     let par = remBtn.parentElement;
     par.remove();
   })

@@ -43,7 +43,7 @@ describe("Helper funcs", function() {
 });
 
 describe("appendDeleteBtn()", function() {
-  it("returns one less tr element", function (){
+  it("returns one more tr element", function (){
     const tr = document.createElement('tr');
     appendDeleteBtn(tr);
     
