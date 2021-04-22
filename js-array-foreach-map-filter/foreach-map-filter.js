@@ -180,10 +180,8 @@ function filterByHasKey(items, key){
     })
 }
 
-
 function filterByValue(arr, key) {
     return filterByHasKey(arr, key);
-    
 }
 
 /*
