@@ -107,15 +107,19 @@ describe("#extractFulName", function() {
 
 describe("#filterByValue", function() {
   var arr = [
+    null, 
+    "John Bailey",
     { first: "Elie", last: "Schoppik" },
     { first: "Tim", last: "Garcia", isCatOwner: true },
     { first: "Matt", last: "Lane" },
-    { first: "Colt", last: "Steele", isCatOwner: true }
+    { first: "Colt", last: "Steele", isCatOwner: true },
+    { first: "Stephen", last: "McNeil", isCatOwner: undefined }
   ];
   it("returns a new array of objects that contain a key", function() {
     expect(filterByValue(arr, "isCatOwner")).toEqual([
       { first: "Tim", last: "Garcia", isCatOwner: true },
-      { first: "Colt", last: "Steele", isCatOwner: true }
+      { first: "Colt", last: "Steele", isCatOwner: true },
+      { first: "Stephen", last: "McNeil", isCatOwner: undefined }
     ]);
   });
 });

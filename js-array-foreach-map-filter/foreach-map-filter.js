@@ -91,7 +91,7 @@ function vowelCount(str){
 //    console.log(arr);
     arr.forEach(function(val){
         // console.log(val);
-        if("aeiou".indexOf(val) !== -1){ //if indexOf string of vowels is anything except -1
+        if("aeiou".indexOf(val) !== -1){ //if indexOf the string of vowels is anything except -1
             if(newObj[val]){    //if theres an obj key that matches val add one
                 newObj[val]++;
             }else{  //if there isnt a key that matches create the key at zero and add one
@@ -174,11 +174,21 @@ Examples:
      [{first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Colt', last:"Steele", isCatOwner: true}]
 */
 
+function filterByHasKey(items, key){
+    return items.filter(function(item){
+        return item && item.hasOwnProperty(key);
+    })
+}
+
+function filterByNotUndefinedKey(items, key){
+    return items.filter(function(item){
+        return item[key] !== undefined;
+    })
+}
+
 function filterByValue(arr, key) {
-    return arr.filter(function(val){
-        //console.log(val[key]);
-        return val[key] !== undefined; //why does looking for a key that exists not work in this case? Why do we look for when something is !undefined
-    });
+    return filterByHasKey(arr, key);
+    
 }
 
 /*
