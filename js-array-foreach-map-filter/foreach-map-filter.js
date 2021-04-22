@@ -180,11 +180,6 @@ function filterByHasKey(items, key){
     })
 }
 
-function filterByNotUndefinedKey(items, key){
-    return items.filter(function(item){
-        return item[key] !== undefined;
-    })
-}
 
 function filterByValue(arr, key) {
     return filterByHasKey(arr, key);
