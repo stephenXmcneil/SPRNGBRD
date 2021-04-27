@@ -96,11 +96,11 @@ Examples:
 
 function partition(arr, callback) {
     //const newArr = [ [], []]
-    return arr.reduce(function(acc, nextVal){ 
+    return arr.reduce(function(acc, currentValue){ 
         if(callback(acc)){
-            acc[0].push(nextVal);
+            acc[0].push(currentValue);
         }else{
-            acc[1].push(nextVal);
+            acc[1].push(currentValue);
         }
         return acc;
     }, [[],[]]);

@@ -87,12 +87,14 @@ describe("updateSummary()", function(){
 
     it ("returns 0 tip percentage when there is no payment total and no number of payment", function () {
         let tipPercentAvg;
-        let paymentTotal = sumPaymentTotal('tipPercent');
-        let numberOfPayments = Object.keys(allPayments).length;
+        let paymentTotal = 0;
+        let numberOfPayments = 0;
 
         if (paymentTotal === 0 && numberOfPayments === 0) {
-        tipPercentAvg = 0;
-        }
+            tipPercentAvg = 0;
+          } else {
+            tipPercentAvg = paymentTotal / numberOfPayments;
+          }
         expect(tipPercentAvg).toEqual(0);
     })
     
@@ -111,4 +113,24 @@ describe("updateSummary()", function(){
         expect(tipPercentAvg).toEqual(100);
     })
 
+    it ("returns returns avg percent tip when payment total and no. of payments isn't zero", function () {
+        let tipPercentAvg;
+        let paymentTotal = 1000;
+        let numberOfPayments = 10;
+
+        if (paymentTotal === 0 && numberOfPayments === 0) {
+            tipPercentAvg = 0;
+          } else {
+            tipPercentAvg = paymentTotal / numberOfPayments;
+          }
+
+        expect(summaryTds[0].innerHTML).toEqual(sumPaymentTotal('billAmt'));
+    })
+
+    afterEach(function(){
+        tipPercentAvg = null;
+        paymentTotal = null;
+        numberOfPayments = null;
+    })
+        
 })
