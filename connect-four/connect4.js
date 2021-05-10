@@ -15,11 +15,11 @@ const board = []; // array of rows, each row is array of cells  (board[y][x])
  *    board = array of rows, each row is array of cells  (board[y][x])
  */
 
-function makeBoard(WIDTH, HEIGHT) {
+function makeBoard() {
   // TODO: set "board" to empty HEIGHT x WIDTH matrix array
-  for(let i = 0; i < WIDTH; i++){
+  for(let i = 0; i < HEIGHT; i++){
     board[i] = [];
-    for(let j = 0; j < HEIGHT; j++){
+    for(let j = 0; j < WIDTH; j++){
       board[i][j] = null;
     }
   }
@@ -48,8 +48,13 @@ function makeHtmlBoard() {
     const row = document.createElement("tr"); //creating table row element
     for (var x = 0; x < WIDTH; x++) { 
       const cell = document.createElement("td"); //creating table data element
-      cell.setAttribute("id", `${y}-${x}`); //giving td element an id attribute of "x"
+      const open = document.createElement("div");
+      open.setAttribute("class", "opening");
+      open.setAttribute("id", `${y}-${x}`);
+      //cell.setAttribute("id", `${y}-${x}`); //giving td element an id attribute of "x"
+      cell.append(open);
       row.append(cell); //append table data to table row 
+
     }
     htmlBoard.append(row); //append table row to board
   }
@@ -62,9 +67,8 @@ function findSpotForCol(x) {
   // column(x how we move from left to right) stays the same as we loop through row (y how we move up and down) 
   // TODO: write the real version of this, rather than always returning 0
   for(let y = HEIGHT-1; y >= 0; y--){
-    if (board[x][y] === null){
-      board[x][y] = y;
-      return board[x][y];
+    if (board[y][x] === null){
+      return y;
     }
   }
   return null;
@@ -77,9 +81,9 @@ function placeInTable(y, x) {
   const newDiv = document.createElement("div")
   newDiv.classList.add('piece');
   newDiv.classList.add('p' + currPlayer);
-  const getTd = document.getElementById(`${y}-${x}`);
-  console.log(getTd);
-  getTd.append(newDiv);
+  const getDiv = document.getElementById(`${y}-${x}`);
+  console.log(getDiv);
+  getDiv.append(newDiv);
 }
 
 /** endGame: announce game end */
@@ -104,7 +108,7 @@ function handleClick(evt) {
   // place piece in board and add to HTML table
   // TODO: add line to update in-memory board
   placeInTable(y, x);
-  board[x][y] = currPlayer;
+  board[y][x] = currPlayer;
 
   // check for win
   if (checkForWin(board)) {
@@ -160,5 +164,5 @@ function checkForWin() {
   }
 }
 
-makeBoard(WIDTH, HEIGHT);
+makeBoard();
 makeHtmlBoard();
