@@ -34,8 +34,8 @@ class Game{
   // make column tops (clickable area for adding a piece to that column)
   const top = document.createElement('tr');
   top.setAttribute('id', 'column-top');
-  this.handleGameClick = this.handleClick.bind(this);
-    
+  
+  this.handleGameClick = this.handleClick.bind(this); 
   top.addEventListener("click", this.handleGameClick);
 
   for (let x = 0; x < this.WIDTH; x++) {
@@ -134,9 +134,9 @@ placeInTable(y, x) {
       cells.every(
         ([y, x]) =>
           y >= 0 &&
-          y < this.height &&
+          y < this.HEIGHT &&
           x >= 0 &&
-          x < this.width &&
+          x < this.WIDTH &&
           this.board[y][x] === this.currPlayer
       );
 
