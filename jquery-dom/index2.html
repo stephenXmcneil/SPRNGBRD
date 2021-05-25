@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+  <style>
+
+    img {
+      max-width: 70%;
+    }
+
+    .image-center {
+      display: block;
+      margin: 10px auto;
+    }
+
+  </style>
+</head>
+
+<body>
+    <div class="container"> 
+        
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+  // Add your code here!
+ //PART 2
+ const $container = $('.container');
+ $container.append("<form>");
+$("form").addClass('movie-form');
+$("form").append("<label>Movie Title</label>");
+$("form").append("<input></br>");
+$("input").attr("id", "title");
+$("form").append("<label>Movie Rating</label>");
+$("form").append("<input>");
+$("input").eq(1).attr("id", "rating");
+$("<input>").attr("type", "submit").appendTo("form");
+let $newList = $("<ol>").appendTo(".container");
+$(".movie-form").submit(function(event){ //not .on() but .submit() 
+    event.preventDefault();
+    let $title = $("#title").val();
+    let $rating = $("#rating").val();  
+    // console.log($title, $rating);
+    let $newLi = $("<li>"+ $title +" , "+ $rating +" </li>");
+    let $newButton = $("<button>x</button>").addClass("remove");
+    $newLi.append($newButton);
+    $newList.append($newLi);
+})
+
+//press x button and its parent is removed
+$(".container").on("click", ".remove", function(){
+    let $selectParent = $(this).parent();
+    $selectParent.remove();
+})
+
+</script>
+</body>
+
+</html>
