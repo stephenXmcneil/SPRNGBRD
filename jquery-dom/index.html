@@ -75,6 +75,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
   // Add your code here!
+  //PART 1
   $(document).ready(function() {
     console.log("Let’s get ready to party with jQuery!");
   });
@@ -103,13 +104,17 @@
     let $color = $('.form-control');
     console.log($color.get(0).value, $color.get(2).value, $color.get(1).value);
 
-    const $bodyBackground = $('body');
-    $bodyBackground.css("background-color", "rgb(20, 123, 50)");
-    // let red = $color.get(0).value;
-    // let green = $color.get(2).value;
-    // let blue = $color.get(1).value;
-    // $bodyBackground.css("background-color", "rgb(`${red}, ${green}, ${blue}`)");
-  })  
+    //const $bodyBackground = $('body');
+    //$bodyBackground.css("background-color", "rgb(20, 123, 50)");
+     let red = $color.get(0).value;
+     let green = $color.get(2).value;
+     let blue = $color.get(1).value;
+    $('body').css('background-color', "rgb(" + red + ", " + green + ", " + blue + ")"); //what is te plus sign doing?
+  })
+
+  $("img").on("click", function(event){
+    event.target.remove();
+  });
 
 </script>
 </body>
