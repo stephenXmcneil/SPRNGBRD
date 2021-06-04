@@ -98,7 +98,7 @@
   //   }
 
   $('.rowInput').on("click", ".form-control", function(event){
-    let selected = event.target;
+    let selected = this;
     //console.log(selected.value);
     selected.setAttribute('value', selected.value); //updates the color value
     let $color = $('.form-control');
@@ -109,7 +109,7 @@
      let red = $color.get(0).value;
      let green = $color.get(2).value;
      let blue = $color.get(1).value;
-    $('body').css('background-color', "rgb(" + red + ", " + green + ", " + blue + ")"); //what is te plus sign doing?
+    $('body').css('background-color', "rgb(" + red + ", " + green + ", " + blue + ")"); //what is the plus sign doing?
   })
 
   $("img").on("click", function(event){
