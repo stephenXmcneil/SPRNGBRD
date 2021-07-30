@@ -17,7 +17,7 @@
 //    ...
 //  ]
 
-const { array } = require("prop-types")
+const { array } = require('prop-types')
 
 const categories = []
 
@@ -57,14 +57,7 @@ async function getCategoryIds () {
  */
 
 function getCategory (catId) {
-  const collection = []
-  for (let i = 0; i < catId.length; i++) {
-    let o = new.Object();
-    o.something;    
-    }
-    
-  }
-  return obj
+
 }
 
 function createObj (title) {
@@ -72,11 +65,10 @@ function createObj (title) {
   const clue = ['bob', 'shirley']
   const arr = ['title', 'clues']
   const arr2 = [title, clue]
-  for(let item of arr){
-    for(let i=0; i<arr2.length; i++){
+  for (const item of arr) {
+    for (let i = 0; i < arr2.length; i++) {
       obj1[item][i] = info
     }
-    
   }
   return obj1
 }

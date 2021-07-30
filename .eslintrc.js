@@ -1,10 +1,12 @@
 module.exports = {
+  plugins: ['jest'],
   env: {
     browser: true,
     es2021: true
   },
   extends: [
-    'standard'
+    'standard',
+    'plugin:jest/all'
   ],
   parserOptions: {
     ecmaVersion: 12,
