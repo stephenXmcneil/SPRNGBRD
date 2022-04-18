@@ -1,0 +1,149 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+html,
+body {
+  background-color: black;
+  margin: 0;
+}
+
+button {
+  top: .8rem;
+  height: 4rem;
+  position: fixed;
+  background-color: #ffc400;
+  border: none;
+  padding: 0 1rem 0 2rem;
+  border-radius: .3rem;
+
+  font-family: gyparody, sans-serif;
+  margin: auto;
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #635400;
+  transform: translateX(0);
+  transition: transform .1s;
+  cursor: pointer;
+  animation: slideInAnimation 1s;
+  animation-iteration-count: 1;
+}
+
+.start-btn {
+  transform: translateX(-1rem);
+}
+
+.restart-btn {
+  padding-top: .2rem;
+  transform: translateX(-9.5rem);
+}
+
+.restart-btn:hover {
+  transform: translateX(-1rem);
+}
+
+.restart-btn span {
+  display: inline-block;
+  padding-left: .5rem;
+  
+}
+
+h1 {
+  text-align: center;
+  background: linear-gradient(white, dimgray);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: gyparody, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+  margin: 1rem;
+  text-shadow: 1rem, 1rem,white;
+}
+
+#jeopardy {
+  text-align: center;
+  font-size: 9pt;
+  background-color: #141780;
+  color: white;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-style: hidden;
+  animation: fadeInAnimation 1s;
+  animation-iteration-count: 1;
+}
+
+#jeopardy th, #jeopardy td {
+  border: solid 5px black;
+  width: 9rem;
+  padding: 1rem;
+  transition: width .2s;
+}
+
+.question span {
+  animation: fadeInAnimation 1s;
+  animation-iteration-count: 1;
+  /* background-color: tomato; */
+  pointer-events: none;
+}
+
+img {
+  width: 2.5rem;
+  opacity: .5;
+}
+
+#jeopardy th {
+  border-bottom: solid 8px black;
+}
+
+#jeopardy.loading th {
+  border-bottom: solid 8px black;
+}
+
+th {
+  text-transform: uppercase;
+  font-family: Corpse, sans-serif;
+  font-weight: bold;
+  height: 3rem;
+  text-shadow: black .07rem .07rem;
+}
+
+td {
+  height: 8rem;
+  font-family: Copse, serif;
+}
+
+td:hover {
+  cursor: pointer;
+}
+
+.question {
+  font-size: 3rem;
+  color: #ffc400;
+  text-shadow: black .1rem .2rem;
+  font-size: clamp(2rem, 5vw, 2.4rem);
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+   }
+}
+
+@keyframes slideInAnimation {
+  0% {
+    transform: translateX(-9rem);
+  }
+  100% {
+    transform: translateX(-1rem);
+   }
+}
