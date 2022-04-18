@@ -1,0 +1,30 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+
+.headerBox {
+  background-color: #060ce9;
+  height: 50px;
+  width: 100px;
+  color: white;
+}
+
+.blueBox {
+  background-color: #060ce9;
+  height: 100px;
+  width: 100px;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.hide2 {
+  display: none;
+}

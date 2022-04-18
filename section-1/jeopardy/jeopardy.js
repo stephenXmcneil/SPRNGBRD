@@ -17,10 +17,6 @@
 //    ...
 //  ]
 
-const { array } = require('prop-types')
-
-const categories = []
-
 /** Get NUM_CATEGORIES random category from API.
  *
  * Returns array of category ids
@@ -56,8 +52,19 @@ async function getCategoryIds () {
  *   ]
  */
 
-function getCategory (catId) {
+function getCategoryData (catId) {
+  // take id
+  // create an object
+  const obj = {}
+  // in the object create a key val pair
+  // pull from the category data to set the title and the title of the category
+  // in the object create another key val pair for clues and an array of objects called clues
+  // in the clues array create a key val pair called question and answer for each index
+  obj.title = 'category title'
+  obj.clues = [{ question: 'question data', answer: 'answer data' }]
 
+  // retrieve data from catId
+  // set it as the category title
 }
 
 function createObj (title) {
@@ -116,9 +123,13 @@ function hideLoadingView () {
  * */
 
 async function setupAndStart () {
-  const randomID = await getCategoryIds()
-  console.log(randomID)
-
+  const categoryIds = await getCategoryIds()
+  // get the data for each
+  // access the category
+  // go to the first category from categoryIds array
+  console.log(categoryIds)
+  const data = await getCategoryData(categoryIds)
+  //
   for (const id of randomID) {
     console.log(id)
     const response = await axios.get(`https://www.jservice.io/api/clues?category=${id}`)

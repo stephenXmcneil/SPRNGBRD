@@ -1,0 +1,78 @@
+body{
+    margin: 0px;
+    background-image: url(CD_bg.png);
+    background-size: cover;
+}
+
+/*Footer Logo*/
+#logoDiv{
+    position: fixed;
+    left: 25%;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+    bottom: 0px;
+}
+
+#CDicon{
+    width: 8%;
+    height: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 25%;
+}
+
+
+/*Sticky Header*/
+.header_container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px;
+    height: 45px;
+    background-color: rgba(34, 34, 34, 0.4);
+  }
+
+  /*controls the size of the header*/
+  h6{
+      margin: .5rem 0px .5px 0px;
+  }
+
+#box1{
+    
+    margin-left: 3rem;
+}
+#box2{
+    margin-left: 3rem;
+}
+#box3{
+    margin-left: 3rem;
+}
+#box4{
+    flex:2;  
+}     
+#box5{
+    margin-right: 3rem; 
+}
+#box6{
+    margin-right: 3rem; 
+}
+#box7{
+    margin-right: 3rem; 
+}
+  
+
+@font-face {
+    font-family: conthrax-sb;
+    src: url('conthrax-sb.ttf'),
+         url('conthrax-sb.ttf'); /* IE9 */
+  }
+
+  a.headerLinks{
+    margin-top: 10px;
+    text-decoration: none; /*removing a underline (and all text decorations) from header link*/
+    font-family: 'conthrax-sb', sans-serif;
+    color: rgb(215, 215, 215);
+    
+  }
+
